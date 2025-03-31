@@ -28,7 +28,7 @@ export function SignupForm() {
       name: "",
       email: "",
       password: "",
-      acceptTerms: false,
+      acceptTerms: true,
     },
   })
 
