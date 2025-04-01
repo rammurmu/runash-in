@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronRight, Menu, X } from "lucide-react"
 import Link from "next/link"
 
-export default function StartPage() {
+export default function Login() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
