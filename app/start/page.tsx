@@ -3,8 +3,8 @@
 
 import { useState } from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { LoginForm } from "@/components/login-form"
-import { SignupForm } from "@/components/signup-form"
+import { LoginForm } from "@/components/ui/login-form"
+import { SignupForm } from "@/components/ui/signup-form"
 import { Button } from "@/components/ui/button"
 import { ChevronRight, Menu, X } from "lucide-react"
 import Link from "next/link"
