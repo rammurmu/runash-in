@@ -1,5 +1,5 @@
-import { ContactForm } from "@/components/contact-form"
-import { ContactInfo } from "@/components/contact-info"
+import { ContactForm } from "@/components/ui/contact-form"
+import { ContactInfo } from "@/components/ui/contact-info"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
