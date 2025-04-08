@@ -43,7 +43,7 @@ export default function RegisterPage() {
       email: "",
       password: "",
       confirmPassword: "",
-      acceptTerms: false,
+      acceptTerms: true,
     },
   })
 
