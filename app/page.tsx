@@ -48,7 +48,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Introducing RunAsh
         </h1>
-        <p className="mt-6 max-w-2xl text-lg sm:text-xl
+        <p className="mt-6 max-w-2xl text-lg sm:text-xl">
           A AI live streaming platform built specifically for automative live sales
        </p>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <div className="mt-10 flex flex-col sm:flex-row gap-4">
