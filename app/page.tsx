@@ -7,21 +7,21 @@ export default function Home() {
       <div className="flex min-h-screen flex-col">
             <header className="fixed top-0 w-full z-10 bg-background/80 backdrop-blur-sm">
                     <div className="container flex h-16 items-center justify-between">
-                              <div className="flex items-center mr-6 gap-2 font-bold text-xl">
+                              <div className="flex items-center ml-6 gap-2 font-bold text-xl">
                                   <span className="text-primary">RunAsh</span>
                                      <span>AI</span>
                               </div>
                               <nav className="hidden md:flex gap-6">
-                                   <Link href="#features" className="text-sm font-medium hover:text-primary">
+                                   <Link href="features" className="text-sm font-medium hover:text-primary">
                                          Features
                                    </Link>
-                                   <Link href="#pricing" className="text-sm font-medium hover:text-primary">
+                                   <Link href="pricing" className="text-sm font-medium hover:text-primary">
                                         Pricing
                                    </Link>
-                                   <Link href="#about" className="text-sm font-medium hover:text-primary">
+                                   <Link href="about" className="text-sm font-medium hover:text-primary">
                                         About
                                    </Link>
-                                  <Link href="#contact" className="text-sm font-medium hover:text-primary">
+                                  <Link href="contact" className="text-sm font-medium hover:text-primary">
                                        Contact
                                   </Link>
                             </nav>
@@ -51,17 +51,17 @@ export default function Home() {
         <p className="mt-6 max-w-2xl text-lg sm:text-xl">
           A AI live streaming platform built specifically for automative live sales
        </p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <Button size="lg" className="bg-primary hover:bg-primary/90">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Get Started
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </Button>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <Button size="lg" variant="outline" className="border-white text-black hover:bg-white/10">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Learn More
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <ChevronRight className="ml-2 h-4 w-4" />
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </Button>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </section>
+      <div className="mt-10 flex flex-col sm:flex-row gap-4">
+        <Button size="lg" className="bg-primary hover:bg-primary/90">
+            Get Started
+        </Button>
+        <Button size="lg" variant="outline" className="border-white text-black hover:bg-white/10">
+         Learn More
+        <ChevronRight className="ml-2 h-4 w-4" />
+          </Button>
+       </div>
+     </div>
+   </section>
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <section className="py-24 bg-background">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <div className="container">
