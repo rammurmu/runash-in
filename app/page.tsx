@@ -5,41 +5,41 @@ import { ChevronRight } from "lucide-react"
 export default function Home() {
   return (
       <div className="flex min-h-screen flex-col">
-            <header className="fixed top-0 w-full z-12 bg-background/80 backdrop-blur-sm">
+            <header className="fixed top-0 w-full z-10 bg-background/80 backdrop-blur-sm">
                     <div className="container flex h-16 items-center justify-between">
-                              <div className="flex items-center gap-2 font-bold text-xl">
-                                          <span className="text-primary">RunAsh</span>
-                                                      <span>AI</span>
-                                                                </div>
-                                                                          <nav className="hidden md:flex gap-6">
-                                                                                      <Link href="#" className="text-sm font-medium hover:text-primary">
-                                                                                                    Features
-                                                                                                                </Link>
-                                                                                                                            <Link href="#" className="text-sm font-medium hover:text-primary">
-                                                                                                                                          Pricing
-                                                                                                                                                      </Link>
-                                                                                                                                                                  <Link href="#" className="text-sm font-medium hover:text-primary">
-                                                                                                                                                                                About
-                                                                                                                                                                                            </Link>
-                                                                                                                                                                                                        <Link href="#" className="text-sm font-medium hover:text-primary">
-                                                                                                                                                                                                                      Contact
-                                                                                                                                                                                                                                  </Link>
-                                                                                                                                                                                                                                            </nav>
-                                                                                                                                                                                                                                                      <div className="flex items-center gap-4">
-                                                                                                                                                                                                                                                                  <Button variant="outline" size="sm" className="hidden md:flex">
-                                                                                                                                                                                                                                                                                Log in
-                                                                                                                                                                                                                                                                                            </Button>
-                                                                                                                                                                                                                                                                                                        <Button size="sm">Get Started</Button>
-                                                                                                                                                                                                                                                                                                                  </div>
-                                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                                                </header>
-                                                                                                                                                                                                                                                                                                                                      <section className="relative h-screen w-full overflow-hidden">
-                                                                                                                                                                                                                                                                                                                                              {/* Video Background */}
-                                                                                                                                                                                                                                                                                                                                                      <div className="absolute inset-0 w-full h-full">
-                                                                                                                                                                                                                                                                                                                                                                <video autoPlay loop muted playsInline className="absolute inset-0 h-full w-full object-cover">
-                                                                                                                                                                                                                                                                                                                                                                            <source src="/api/video" type="video/mp4" />
-                                                                                                                                                                                                                                                                                                                                                                                        Your browser does not support the video tag.
-                                                                                                                                                                                                                                                                                                                                                                                                  </video>
+                              <div className="flex items-center mr-2 gap-2 font-bold text-xl">
+                                  <span className="text-primary">RunAsh</span>
+                                     <span>AI</span>
+                              </div>
+                              <nav className="hidden md:flex gap-6">
+                                   <Link href="#" className="text-sm font-medium hover:text-primary">
+                                         Features
+                                   </Link>
+                                   <Link href="#" className="text-sm font-medium hover:text-primary">
+                                        Pricing
+                                   </Link>
+                                   <Link href="#" className="text-sm font-medium hover:text-primary">
+                                        About
+                                   </Link>
+                                  <Link href="#" className="text-sm font-medium hover:text-primary">
+                                       Contact
+                                  </Link>
+                            </nav>
+                            <div className="flex items-center gap-4">
+                               <Button variant="outline" size="sm" className="hidden md:flex">
+                                  Log in
+                                </Button>
+                              <Button size="sm">Get Started</Button>
+                          </div>
+                       </div>
+                     </header>
+       <section className="relative h-screen w-full overflow-hidden">
+          {/* Video Background */}
+          <div className="absolute inset-0 w-full h-full">
+            <video autoPlay loop muted playsInline className="absolute inset-0 h-full w-full object-cover">
+                 <source src="/api/video" type="video/mp4" />
+                    Your browser does not support the video tag.
+            </video>
                                                                                                                                                                                                                                                                                                                                                                                                             {/* Overlay to make text more readable */}
                                                                                                                                                                                                                                                                                                                                                                                                                       <div className="absolute inset-0 bg-black/50" />
                                                                                                                                                                                                                                                                                                                                                                                                                               </div>
