@@ -7,21 +7,21 @@ export default function Home() {
       <div className="flex min-h-screen flex-col">
             <header className="fixed top-0 w-full z-10 bg-background/80 backdrop-blur-sm">
                     <div className="container flex h-16 items-center justify-between">
-                              <div className="flex items-center mr-2 gap-2 font-bold text-xl">
+                              <div className="flex items-center mr-6 gap-2 font-bold text-xl">
                                   <span className="text-primary">RunAsh</span>
                                      <span>AI</span>
                               </div>
                               <nav className="hidden md:flex gap-6">
-                                   <Link href="#" className="text-sm font-medium hover:text-primary">
+                                   <Link href="#features" className="text-sm font-medium hover:text-primary">
                                          Features
                                    </Link>
-                                   <Link href="#" className="text-sm font-medium hover:text-primary">
+                                   <Link href="#pricing" className="text-sm font-medium hover:text-primary">
                                         Pricing
                                    </Link>
-                                   <Link href="#" className="text-sm font-medium hover:text-primary">
+                                   <Link href="#about" className="text-sm font-medium hover:text-primary">
                                         About
                                    </Link>
-                                  <Link href="#" className="text-sm font-medium hover:text-primary">
+                                  <Link href="#contact" className="text-sm font-medium hover:text-primary">
                                        Contact
                                   </Link>
                             </nav>
@@ -40,18 +40,17 @@ export default function Home() {
                  <source src="/api/video" type="video/mp4" />
                     Your browser does not support the video tag.
             </video>
-                                                                                                                                                                                                                                                                                                                                                                                                            {/* Overlay to make text more readable */}
-                                                                                                                                                                                                                                                                                                                                                                                                                      <div className="absolute inset-0 bg-black/50" />
-                                                                                                                                                                                                                                                                                                                                                                                                                              </div>
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                      {/* Hero Content */}
-                                                                                                                                                                                                                                                                                                                                                                                                                                              <div className="container relative z-1 flex h-full flex-col items-center justify-center text-center text-white">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Introducing RunAsh
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </h1>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <p className="mt-6 max-w-2xl text-lg sm:text-xl">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    A AI live streaming platform built specifically for automative live sales
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </p>
+       {/* Overlay to make text more readable */}
+        <div className="absolute inset-0 bg-black/50" />
+         </div>
+       {/* Hero Content */}
+      <div className="container relative z-1 flex h-full flex-col items-center justify-center text-center text-white">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            Introducing RunAsh
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg sm:text-xl
+          A AI live streaming platform built specifically for automative live sales
+       </p>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <div className="mt-10 flex flex-col sm:flex-row gap-4">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <Button size="lg" className="bg-primary hover:bg-primary/90">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Get Started
