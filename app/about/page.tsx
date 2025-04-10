@@ -52,7 +52,7 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
-                Founded in 2021, our platform was born from a simple idea: what if AI could make live streaming more
+                Founded in 2023, our platform was born from a simple idea: what if AI could make live streaming more
                 engaging, accessible, and powerful for everyone?
               </p>
               <p className="text-gray-300 mb-6 text-lg">
@@ -129,20 +129,20 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <TeamMember
-              name="Ram Murmu"
-              role="Founder & CEO/CTO"
+              name="Alex Chen"
+              role="Founder & CEO"
               image="/placeholder.svg?height=300&width=300"
-              bio="Former AI researcher at MIT with 10+ years experience in machine learning and computer vision.Led engineering teams at major streaming platforms before joining to build our AI infrastructure"
+              bio="Former AI researcher at MIT with 10+ years experience in machine learning and computer vision."
               socialLinks={{
                 twitter: "https://twitter.com/alexchen",
                 linkedin: "https://linkedin.com/in/alexchen",
               }}
             />
             <TeamMember
-              name="Vaibhav Murmu"
-              role=" Co-Founder & CFO"
+              name="Sarah Johnson"
+              role="CTO"
               image="/placeholder.svg?height=300&width=300"
-              bio="Led Finance & accounting teams at major streaming platforms before joining to build our AI infrastructure."
+              bio="Led engineering teams at major streaming platforms before joining to build our AI infrastructure."
               socialLinks={{
                 twitter: "https://twitter.com/sarahjohnson",
                 linkedin: "https://linkedin.com/in/sarahjohnson",
@@ -407,4 +407,74 @@ export default function About() {
               <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-teal-400 to-purple-400 text-transparent bg-clip-text">
                 Resources
               </h3>
-         
+             <ul className="space-y-2">
+                <li>
+                  <Link href="/features" className="text-gray-400 hover:text-white transition-colors">
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/integrations" className="text-gray-400 hover:text-white transition-colors">
+                    Integrations
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-teal-400 to-purple-400 text-transparent bg-clip-text">
+                Resources
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/docs" className="text-gray-400 hover:text-white transition-colors">
+                    Documentation
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tutorials" className="text-gray-400 hover:text-white transition-colors">
+                    Tutorials
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
+                    Blog
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-purple-400 to-teal-400 text-transparent bg-clip-text">
+                Connect
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    Discord
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500">
+            <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+      }
