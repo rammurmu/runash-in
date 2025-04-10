@@ -5,7 +5,7 @@ import TeamMember from "@/components/team-member"
 import TechStack from "@/components/tech-stack"
 import Milestone from "@/components/milestone"
 
-export default function AboutPage() {
+export default function About() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -52,7 +52,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
-                Founded in 2023, our platform was born from a simple idea: what if AI could make live streaming more
+                Founded in 2021, our platform was born from a simple idea: what if AI could make live streaming more
                 engaging, accessible, and powerful for everyone?
               </p>
               <p className="text-gray-300 mb-6 text-lg">
@@ -129,20 +129,20 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <TeamMember
-              name="Alex Chen"
-              role="Founder & CEO"
+              name="Ram Murmu"
+              role="Founder & CEO/CTO"
               image="/placeholder.svg?height=300&width=300"
-              bio="Former AI researcher at MIT with 10+ years experience in machine learning and computer vision."
+              bio="Former AI researcher at MIT with 10+ years experience in machine learning and computer vision.Led engineering teams at major streaming platforms before joining to build our AI infrastructure"
               socialLinks={{
                 twitter: "https://twitter.com/alexchen",
                 linkedin: "https://linkedin.com/in/alexchen",
               }}
             />
             <TeamMember
-              name="Sarah Johnson"
-              role="CTO"
+              name="Vaibhav Murmu"
+              role=" Co-Founder & CFO"
               image="/placeholder.svg?height=300&width=300"
-              bio="Led engineering teams at major streaming platforms before joining to build our AI infrastructure."
+              bio="Led Finance & accounting teams at major streaming platforms before joining to build our AI infrastructure."
               socialLinks={{
                 twitter: "https://twitter.com/sarahjohnson",
                 linkedin: "https://linkedin.com/in/sarahjohnson",
