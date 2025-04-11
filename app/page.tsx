@@ -71,7 +71,7 @@ export default function Home() {
               An end-to-end platform for live streamiing
         </p>
     </div>
-
+   </div>
    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
          {[1, 2, 3].map((i) => (
           <div key={i} className="flex flex-col items-center text-center p-6 rounded-lg border bg-card">      
