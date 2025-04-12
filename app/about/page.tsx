@@ -3,7 +3,7 @@ import { ArrowRight, Code, Cpu, Globe, Layers, Shield, Zap } from "lucide-react"
 import Link from "next/link"
 import { TeamMember } from "@/components/ui/team-member"
 import { TechStack } from "@/components/ui/tech-stack"
-import { MileStone } from "@/components/ui/mile-stone"
+import { Milestone } from "@/components/ui/milestone"
 
 export default function About() {
   return (
