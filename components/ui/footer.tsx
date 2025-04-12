@@ -1,6 +1,5 @@
-function Footer() {
+export default function Footer() {
   return (
-    {/* Footer */}
       <footer className="py-12 bg-white border-t border-purple-900/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -97,8 +96,8 @@ function Footer() {
             <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
           </div>
         </div>
+      </div>
       </footer>
-  );
+  )
 }
 
-export default Footer;
