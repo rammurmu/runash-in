@@ -96,7 +96,7 @@ export default function Footer() {
             <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
           </div>
         </div>
-      </div>
+      
       </footer>
   )
 }
