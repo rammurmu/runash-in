@@ -3,7 +3,6 @@ import { ArrowRight, Code, Cpu, Globe, Layers, Shield, Zap } from "lucide-react"
 import Link from "next/link"
 import { TeamMember } from "@/components/ui/team-member"
 import { TechStack } from "@/components/ui/tech-stack"
-import { Milestone } from "@/components/ui/milestone" 
 
 export default function About() {
   return (
@@ -243,58 +242,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-20 bg-gradient-to-b from-black via-purple-950/20 to-black relative">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5"></div>
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-teal-400 text-transparent bg-clip-text">
-              Our Journey
-            </h2>
-            <p className="text-gray-300 text-lg">
-              From concept to cutting-edge platform, see how we've evolved to lead the AI streaming revolution.
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-500 via-blue-500 to-teal-500 rounded-full"></div>
-
-            <div className="space-y-24">
-              <Milestone
-                year="2021"
-                title="Company Founded"
-                description="Our founding team came together with a vision to revolutionize live streaming with AI technology."
-                position="left"
-              />
-              <Milestone
-                year="2022"
-                title="Seed Funding"
-                description="Secured $5M in seed funding to build our core AI technology and assemble our engineering team."
-                position="right"
-              />
-              <Milestone
-                year="2023"
-                title="Beta Launch"
-                description="Released our beta platform to select content creators, gathering valuable feedback and refining our technology."
-                position="left"
-              />
-              <Milestone
-                year="2024"
-                title="Public Release"
-                description="Launched our platform to the public, introducing our suite of AI-powered streaming tools to creators worldwide."
-                position="right"
-              />
-              <Milestone
-                year="2025"
-                title="The Future"
-                description="Expanding our AI capabilities and building new features to further empower content creators across the globe."
-                position="left"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Partners Section */}
       <section className="py-20 relative overflow-hidden">
