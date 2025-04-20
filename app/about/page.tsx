@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/ui/navbar"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Code, Cpu, Globe, Layers, Shield, Zap } from "lucide-react"
 import Link from "next/link"
