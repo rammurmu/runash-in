@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Code, Cpu, Globe, Layers, Shield, Zap } from "lucide-react"
 import Link from "next/link"
-import TeamMember from "@/components/ui/team-member"
-import TechStack from "@/components/ui/tech-stack"
-//... import Milestone from "@/components/ui/milestone" ...//
+import { TeamMember } from "@/components/ui/team-member"
+import { TechStack } from "@/components/ui/tech-stack"
+import { Milestone } from "@/components/ui/milestone" 
 
 export default function About() {
   return (
@@ -262,19 +262,19 @@ export default function About() {
 
             <div className="space-y-24">
               <Milestone
-                year="2023"
+                year="2021"
                 title="Company Founded"
                 description="Our founding team came together with a vision to revolutionize live streaming with AI technology."
                 position="left"
               />
               <Milestone
-                year="2023"
+                year="2022"
                 title="Seed Funding"
                 description="Secured $5M in seed funding to build our core AI technology and assemble our engineering team."
                 position="right"
               />
               <Milestone
-                year="2024"
+                year="2023"
                 title="Beta Launch"
                 description="Released our beta platform to select content creators, gathering valuable feedback and refining our technology."
                 position="left"
