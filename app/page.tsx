@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { Play, Zap, Users, Shield, ArrowRight } from "lucide-react"
-import VideoBackground from "@/components/video-background"
-import FeatureCard from "@/components/feature-card"
-import Navbar from "@/components/navbar"
+import VideoBackground from "@/components/ui/video-background"
+import FeatureCard from "@/components/ui/feature-card"
+import Navbar from "@/components/ui/navbar"
 
-export default function LandingPage() {
+export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
