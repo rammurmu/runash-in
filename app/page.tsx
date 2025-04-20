@@ -4,7 +4,7 @@ import VideoBackground from "@/components/video-background"
 import FeatureCard from "@/components/feature-card"
 import Navbar from "@/components/navbar"
 
-export default function Home() {
+export default function LandingPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
