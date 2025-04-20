@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Code, Cpu, Globe, Layers, Shield, Zap } from "lucide-react"
 import Link from "next/link"
-import { TeamMember } from "@/components/ui/team-member"
-import { TechStack } from "@/components/ui/tech-stack"
-import { Milestone } from "@/components/ui/milestone"
+import TeamMember from "@/components/ui/team-member"
+import TechStack from "@/components/ui/tech-stack"
+import Milestone from "@/components/ui/milestone"
 
 export default function About() {
   return (
@@ -355,7 +355,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Footer */}
+            {/* Footer */}
       <footer className="py-12 bg-black border-t border-purple-900/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -386,28 +386,6 @@ export default function About() {
                 Product
               </h3>
               <ul className="space-y-2">
-                <li>
-                  <Link href="/features" className="text-gray-400 hover:text-white transition-colors">
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/integrations" className="text-gray-400 hover:text-white transition-colors">
-                    Integrations
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-teal-400 to-purple-400 text-transparent bg-clip-text">
-                Resources
-              </h3>
-             <ul className="space-y-2">
                 <li>
                   <Link href="/features" className="text-gray-400 hover:text-white transition-colors">
                     Features
@@ -477,4 +455,5 @@ export default function About() {
       </footer>
     </div>
   )
-      }
+                  }
+       
