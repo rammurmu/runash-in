@@ -27,3 +27,4 @@ export default function Milestone({ year, title, description, position }: Milest
     </div>
   )
 }
+
