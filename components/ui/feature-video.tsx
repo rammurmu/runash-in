@@ -37,5 +37,5 @@ export default function FeatureVideo({ title, description, videoThumbnail, durat
       </div>
     </div>
   )
-          }
+  }
           
