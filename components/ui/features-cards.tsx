@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 
-interface FeaturesCardsProps {
+interface FeatureCardsProps {
   icon: ReactNode
   title: string
   description: string
