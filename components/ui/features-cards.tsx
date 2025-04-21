@@ -1,13 +1,13 @@
 import type { ReactNode } from "react"
 
-interface FeatureCardsProps {
+interface FeaturesCardsProps {
   icon: ReactNode
   title: string
   description: string
   gradient: string
 }
 
-export default function FeatureCards({ icon, title, description, gradient }: FeatureCardProps) {
+export default function FeatureCards({ icon, title, description, gradient }: FeatureCardsProps) {
   return (
     <div className="group relative rounded-xl overflow-hidden transition-all duration-300 hover:translate-y-[-5px]">
       {/* Gradient border */}
@@ -20,5 +20,5 @@ export default function FeatureCards({ icon, title, description, gradient }: Fea
       </div>
     </div>
   )
-                                     }
-      
+       }
+    
