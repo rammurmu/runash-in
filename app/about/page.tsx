@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Code, Cpu, Globe, Layers, Shield, Zap } from "lucide-react"
 import Link from "next/link"
-import { TeamMember } from "@/components/ui/team-member"
-import { TechStack } from "@/components/ui/tech-stack"
+import { TeamMember } from "@/components/ui/TeamMember"
+import { TechStack } from "@/components/ui/TechStack"
 
 export default function About() {
   return (
