@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 
-interface ContactsMethodProps {
+interface ContactMethodProps {
   icon: ReactNode
   title: string
   description: string
@@ -9,7 +9,7 @@ interface ContactsMethodProps {
   action?: ReactNode
 }
 
-export default function ContactsMethod({ icon, title, description, contact, gradient, action }: ContactMethodProps) {
+export default function ContactMethod({ icon, title, description, contact, gradient, action }: ContactMethodProps) {
   return (
     <div className="flex items-start space-x-4">
       <div className={`p-3 rounded-lg bg-gradient-to-br ${gradient} flex-shrink-0`}>{icon}</div>
