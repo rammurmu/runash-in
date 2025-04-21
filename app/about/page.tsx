@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Code, Cpu, Globe, Layers, Shield, Zap } from "lucide-react"
 import Link from "next/link"
-import { TeamMember } from "@/components/ui/team-member"
-import { TechStack } from "@/components/ui/tech-stack"
 
 export default function About() {
   return (
@@ -127,66 +125,7 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <TeamMember
-              name="Alex Chen"
-              role="Founder & CEO"
-              image="/placeholder.svg?height=300&width=300"
-              bio="Former AI researcher at MIT with 10+ years experience in machine learning and computer vision."
-              socialLinks={{
-                twitter: "https://twitter.com/alexchen",
-                linkedin: "https://linkedin.com/in/alexchen",
-              }}
-            />
-            <TeamMember
-              name="Sarah Johnson"
-              role="CTO"
-              image="/placeholder.svg?height=300&width=300"
-              bio="Led engineering teams at major streaming platforms before joining to build our AI infrastructure."
-              socialLinks={{
-                twitter: "https://twitter.com/sarahjohnson",
-                linkedin: "https://linkedin.com/in/sarahjohnson",
-              }}
-            />
-            <TeamMember
-              name="Michael Rodriguez"
-              role="Head of Product"
-              image="/placeholder.svg?height=300&width=300"
-              bio="Product visionary with experience at leading tech companies focused on creator tools."
-              socialLinks={{
-                twitter: "https://twitter.com/michaelrodriguez",
-                linkedin: "https://linkedin.com/in/michaelrodriguez",
-              }}
-            />
-            <TeamMember
-              name="Priya Patel"
-              role="Lead AI Engineer"
-              image="/placeholder.svg?height=300&width=300"
-              bio="Specializes in real-time video processing and neural networks for content enhancement."
-              socialLinks={{
-                twitter: "https://twitter.com/priyapatel",
-                linkedin: "https://linkedin.com/in/priyapatel",
-              }}
-            />
-            <TeamMember
-              name="David Kim"
-              role="UX Director"
-              image="/placeholder.svg?height=300&width=300"
-              bio="Award-winning designer focused on creating intuitive interfaces for complex AI tools."
-              socialLinks={{
-                twitter: "https://twitter.com/davidkim",
-                linkedin: "https://linkedin.com/in/davidkim",
-              }}
-            />
-            <TeamMember
-              name="Emma Wilson"
-              role="Head of Community"
-              image="/placeholder.svg?height=300&width=300"
-              bio="Former content creator who understands the challenges streamers face every day."
-              socialLinks={{
-                twitter: "https://twitter.com/emmawilson",
-                linkedin: "https://linkedin.com/in/emmawilson",
-              }}
-            />
+            
           </div>
         </div>
       </section>
@@ -208,36 +147,7 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <TechStack
-              icon={<Cpu className="h-8 w-8 text-blue-400" />}
-              title="Neural Processing"
-              description="Our custom neural networks analyze and enhance video and audio in real-time with minimal latency."
-            />
-            <TechStack
-              icon={<Layers className="h-8 w-8 text-purple-400" />}
-              title="Multi-modal AI"
-              description="Combines computer vision, natural language processing, and audio analysis for comprehensive stream enhancement."
-            />
-            <TechStack
-              icon={<Code className="h-8 w-8 text-teal-400" />}
-              title="Edge Computing"
-              description="Distributed AI processing ensures smooth performance regardless of your internet connection."
-            />
-            <TechStack
-              icon={<Shield className="h-8 w-8 text-blue-400" />}
-              title="Privacy-First Design"
-              description="All processing happens on your device or in secure cloud environments with strict privacy controls."
-            />
-            <TechStack
-              icon={<Zap className="h-8 w-8 text-purple-400" />}
-              title="Real-time Optimization"
-              description="Adaptive algorithms that adjust to your streaming conditions for consistent quality."
-            />
-            <TechStack
-              icon={<Globe className="h-8 w-8 text-teal-400" />}
-              title="Global Infrastructure"
-              description="Servers strategically located worldwide to ensure low-latency streaming for global audiences."
-            />
+            
           </div>
         </div>
       </section>
