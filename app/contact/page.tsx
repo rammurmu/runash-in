@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Mail, MessageSquare, Phone, Clock, HelpCircle, ArrowRight } from "lucide-react"
-import ContactForm from "@/components/ui/contacts-form"
+import ContactsForm from "@/components/ui/contacts-form"
 import ContactMethod from "@/components/ui/contact-method"
 import FaqItem from "@/components/ui/faq-item"
 import OfficeLocation from "@/components/ui/office-location"
