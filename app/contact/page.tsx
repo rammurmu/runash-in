@@ -4,6 +4,7 @@ import ContactsForm from "@/components/ui/contacts-form"
 import ContactMethod from "@/components/ui/contact-method"
 import FaqItem from "@/components/ui/faq-item"
 import OfficeLocation from "@/components/ui/office-location"
+import Link from "next/link"
 
 export default function ContactPage() {
   return (
