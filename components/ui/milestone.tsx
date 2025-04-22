@@ -1,30 +1,24 @@
-interface MilestoneProps {
-  year: string
+import type { ReactNode } from "react"
+
+interface ContactMethodProps {
+  icon: ReactNode
   title: string
   description: string
-  position: "left" | "right"
+  contact: string
+  gradient: string
+  action?: ReactNode
 }
 
-export default function Milestone({ year, title, description, position }: MilestoneProps) {
+export default function ContactMethod({ icon, title, description, contact, gradient, action }: ContactMethodProps) {
   return (
-    <div className="relative">
-      {/* Center dot */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 via-blue-500 to-teal-500 flex items-center justify-center">
-        <div className="w-3 h-3 rounded-full bg-black"></div>
-      </div>
-
-      {/* Content */}
-      <div className={`flex ${position === "left" ? "flex-row" : "flex-row-reverse"} items-center`}>
-        <div className={`w-1/2 ${position === "left" ? "pr-12 text-right" : "pl-12 text-left"}`}>
-          <div className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-purple-900/50 to-blue-900/50 border border-purple-500/30 mb-3">
-            <span className="text-sm font-semibold text-purple-300">{year}</span>
-          </div>
-          <h3 className="text-xl font-bold mb-2">{title}</h3>
-          <p className="text-gray-400">{description}</p>
-        </div>
-        <div className="w-1/2"></div>
+    <div className="flex items-start space-x-4">
+      <div className={`p-3 rounded-lg bg-gradient-to-br ${gradient} flex-shrink-0`}>{icon}</div>
+      <div className="flex-grow">
+        <h3 className="font-bold text-lg mb-1 text-gray-900 dark:text-white">{title}</h3>
+        <p className="text-gray-600 dark:text-gray-400 text-sm mb-1">{description}</p>
+        <p className="text-gray-900 dark:text-white font-medium">{contact}</p>
+        {action && <div className="mt-3">{action}</div>}
       </div>
     </div>
   )
-}
-
+      }
