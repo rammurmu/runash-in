@@ -58,7 +58,7 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/admin/:path*"],
+  matcher: [
     /*
      * Match all request paths except:
      * - _next/static (static files)
@@ -67,7 +67,7 @@ export const config = {
      * - public folder
      * - api routes that don't require auth
      */
-    "/((?!_next/static|_next/image|favicon.ico|public|api/auth).*)",
+    "/((?!_next/static|_next/image|favicon.ico|public|api/auth|dashboard/:path|admin/:path).*)",
   ],
 }
 
