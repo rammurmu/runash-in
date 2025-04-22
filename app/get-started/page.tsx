@@ -396,4 +396,26 @@ export default function GetStartedPage() {
             <div className="flex items-center gap-4 mt-4 md:mt-0">
               <a
                 href="/help"
-                className="text-sm text-gray-500 dark:text-gray-400 hover:text-orange-600 dar
+                className="text-sm text-gray-500 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400"
+              >
+                Help Center
+              </a>
+              <a
+                href="/terms"
+                className="text-sm text-gray-500 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400"
+              >
+                Terms
+              </a>
+              <a
+                href="/privacy"
+                className="text-sm text-gray-500 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400"
+              >
+                Privacy
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
