@@ -14,11 +14,11 @@ export default function ContactMethod({ icon, title, description, contact, gradi
     <div className="flex items-start space-x-4">
       <div className={`p-3 rounded-lg bg-gradient-to-br ${gradient} flex-shrink-0`}>{icon}</div>
       <div className="flex-grow">
-        <h3 className="font-bold text-lg mb-1">{title}</h3>
-        <p className="text-gray-400 text-sm mb-1">{description}</p>
-        <p className="text-white font-medium">{contact}</p>
+        <h3 className="font-bold text-lg mb-1 text-gray-900 dark:text-white">{title}</h3>
+        <p className="text-gray-600 dark:text-gray-400 text-sm mb-1">{description}</p>
+        <p className="text-gray-900 dark:text-white font-medium">{contact}</p>
         {action && <div className="mt-3">{action}</div>}
       </div>
     </div>
   )
-}
+          }
