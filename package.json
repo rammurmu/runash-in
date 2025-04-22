@@ -63,6 +63,7 @@
     "sonner": "^2.0.3",
     "swr": "^2.3.3",
     "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7",
     "tw-animate-css": "^1.2.4",
     "vaul": "^1.1.2",
     "wepack": "^0.0.1",
