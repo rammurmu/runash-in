@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { ArrowRight, Github, Twitter } from "lucide-react"
 import Link from "next/link"
-import ThemeToggle from "@/components/theme-toggle"
+//... import ThemeToggle from "@/components/theme-toggle" ...//
 
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false)
@@ -32,7 +32,7 @@ export default function LoginPage() {
             RunAsh
           </span>
         </Link>
-        <ThemeToggle />
+        
       </header>
 
       {/* Main Content */}
