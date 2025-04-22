@@ -1,3 +1,4 @@
+import { auth } from "@/auth"
 import { NextResponse } from "next/server"
 import { getToken } from "next-auth/jwt"
 import type { NextRequest } from "next/server"
@@ -12,6 +13,20 @@ export async function middleware(request: NextRequest) {
   const token = await getToken({ req: request })
   const isAuthenticated = !!token
   const path = request.nextUrl.pathname
+  const session = await auth()
+
+  // Protected routes
+  if (
+    !session &&
+    (request.nextUrl.pathname.startsWith("/dashboard") || request.nextUrl.pathname.startsWith("/admin"))
+  ) {
+    return NextResponse.redirect(new URL(`/login?callbackUrl=${request.nextUrl.pathname}`, request.url))
+  }
+
+  // Admin routes
+  if (session && session.user?.role !== "ADMIN" && request.nextUrl.pathname.startsWith("/admin")) {
+    return NextResponse.redirect(new URL("/dashboard", request.url))
+  }
 
   // Check if the path requires authentication
   const isAuthRequired = authRequiredPaths.some((authPath) => path === authPath || path.startsWith(`${authPath}/`))
@@ -52,7 +67,10 @@ export const config = {
      * - public folder
      * - api routes that don't require auth
      */
-    "/((?!_next/static|_next/image|favicon.ico|public|api/auth).*)",
+    "/((?!_next/static|_next/image|favicon.ico|public|api/auth|dashboard/:path|admin/:path).*)",
   ],
 }
 
+
+
+  
