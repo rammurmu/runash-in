@@ -12,9 +12,10 @@ interface TeamMemberProps {
     twitter?: string
     linkedin?: string
   }
+  gradient: string
 }
 
-export default function TeamMember({ name, role, image, bio, socialLinks }: TeamMemberProps) {
+export default function TeamMember({ name, role, image, bio, socialLinks, gradient }: TeamMemberProps) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -24,8 +25,8 @@ export default function TeamMember({ name, role, image, bio, socialLinks }: Team
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Gradient border */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-blue-500 to-teal-500 rounded-xl p-[1px]">
-        <div className="absolute inset-0 bg-black rounded-xl"></div>
+      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} rounded-xl p-[1px]`}>
+        <div className="absolute inset-0 bg-white dark:bg-gray-900 rounded-xl"></div>
       </div>
 
       <div className="relative p-1">
@@ -46,9 +47,9 @@ export default function TeamMember({ name, role, image, bio, socialLinks }: Team
         </div>
 
         {/* Info */}
-        <div className="p-6 bg-gradient-to-br from-purple-900/30 via-blue-900/30 to-black rounded-b-lg">
-          <h3 className="font-bold text-xl mb-1">{name}</h3>
-          <p className="text-sm text-purple-300 mb-4">{role}</p>
+        <div className="p-6 bg-gradient-to-br from-orange-50/30 via-yellow-50/30 to-white dark:from-orange-900/30 dark:via-yellow-900/30 dark:to-gray-900 rounded-b-lg">
+          <h3 className="font-bold text-xl mb-1 text-gray-900 dark:text-white">{name}</h3>
+          <p className="text-sm text-orange-600 dark:text-orange-400 mb-4">{role}</p>
 
           {/* Social links */}
           <div className="flex space-x-3">
@@ -57,9 +58,9 @@ export default function TeamMember({ name, role, image, bio, socialLinks }: Team
                 href={socialLinks.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-purple-900/50 hover:bg-purple-700/50 transition-colors"
+                className="p-2 rounded-full bg-orange-100 hover:bg-orange-200 dark:bg-orange-900/50 dark:hover:bg-orange-800/50 transition-colors"
               >
-                <Twitter className="h-4 w-4 text-purple-300" />
+                <Twitter className="h-4 w-4 text-orange-600 dark:text-orange-400" />
               </a>
             )}
             {socialLinks.linkedin && (
@@ -67,9 +68,9 @@ export default function TeamMember({ name, role, image, bio, socialLinks }: Team
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-blue-900/50 hover:bg-blue-700/50 transition-colors"
+                className="p-2 rounded-full bg-yellow-100 hover:bg-yellow-200 dark:bg-yellow-900/50 dark:hover:bg-yellow-800/50 transition-colors"
               >
-                <Linkedin className="h-4 w-4 text-blue-300" />
+                <Linkedin className="h-4 w-4 text-yellow-600 dark:text-yellow-400" />
               </a>
             )}
           </div>
@@ -77,5 +78,5 @@ export default function TeamMember({ name, role, image, bio, socialLinks }: Team
       </div>
     </div>
   )
-        }
+      }
           
