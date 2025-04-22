@@ -1,168 +1,143 @@
 "use client"
 
+import type React from "react"
+
 import { useState } from "react"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import * as z from "zod"
 import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Loader2, CheckCircle2 } from "lucide-react"
+import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Loader2 } from "lucide-react"
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  subject: z.string().min(1, { message: "Please select a subject" }),
-  message: z
-    .string()
-    .min(10, { message: "Message must be at least 10 characters" })
-    .max(500, { message: "Message must not exceed 500 characters" }),
-})
+export default function ContactForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
-export function ContactForm() {
-  const [isLoading, setIsLoading] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
-  const [isError, setIsError] = useState(false)
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    },
-  })
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1500))
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsLoading(true)
-    setIsSuccess(false)
-    setIsError(false)
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+  }
 
-    // Simulate API call
-    try {
-      // In a real application, you would send the form data to your API
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      console.log(values)
-
-      setIsSuccess(true)
-      form.reset()
-    } catch (error) {
-      console.error("Error submitting form:", error)
-      setIsError(true)
-    } finally {
-      setIsLoading(false)
-    }
+  if (isSubmitted) {
+    return (
+      <div className="p-6 rounded-lg bg-gradient-to-br from-orange-100/30 via-yellow-100/30 to-white dark:from-orange-900/30 dark:via-yellow-900/30 dark:to-gray-900 text-center">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 dark:from-orange-400 dark:to-yellow-400 mb-6">
+          <svg
+            className="h-8 w-8 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Message Sent!</h3>
+        <p className="text-gray-700 dark:text-gray-300 mb-6">
+          Thank you for reaching out. Our team will get back to you within 24 hours.
+        </p>
+        <Button
+          variant="outline"
+          className="border-orange-500 text-orange-600 hover:bg-orange-50 dark:text-orange-400 dark:hover:bg-orange-950/50"
+          onClick={() => setIsSubmitted(false)}
+        >
+          Send Another Message
+        </Button>
+      </div>
+    )
   }
 
   return (
-    <div className="bg-card rounded-lg border p-6 shadow-sm">
-      <h2 className="text-xl font-semibold mb-6">Send us a message</h2>
-
-      {isSuccess && (
-        <Alert className="mb-6 bg-primary/10 text-primary border-primary/20">
-          <CheckCircle2 className="h-4 w-4" />
-          <AlertTitle>Success!</AlertTitle>
-          <AlertDescription>Your message has been sent. We'll get back to you as soon as possible.</AlertDescription>
-        </Alert>
-      )}
-
-      {isError && (
-        <Alert className="mb-6 bg-destructive/10 text-destructive border-destructive/20">
-          <AlertTitle>Error</AlertTitle>
-          <AlertDescription>There was a problem sending your message. Please try again later.</AlertDescription>
-        </Alert>
-      )}
-
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Your name" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input placeholder="your.email@example.com" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-
-          <FormField
-            control={form.control}
-            name="subject"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Subject</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a subject" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="general">General Inquiry</SelectItem>
-                    <SelectItem value="support">Technical Support</SelectItem>
-                    <SelectItem value="billing">Billing Question</SelectItem>
-                    <SelectItem value="feedback">Feedback</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-2">
+          <Label htmlFor="name" className="text-gray-700 dark:text-gray-300">
+            Name
+          </Label>
+          <Input
+            id="name"
+            placeholder="Your name"
+            required
+            className="bg-white/50 dark:bg-gray-900/50 border-orange-200 dark:border-orange-800/30 focus:border-orange-500/70 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-500"
           />
-
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Message</FormLabel>
-                <FormControl>
-                  <Textarea placeholder="How can we help you?" className="min-h-[120px]" {...field} />
-                </FormControl>
-                <FormDescription>{field.value.length}/500 characters</FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="email" className="text-gray-700 dark:text-gray-300">
+            Email
+          </Label>
+          <Input
+            id="email"
+            type="email"
+            placeholder="your.email@example.com"
+            required
+            className="bg-white/50 dark:bg-gray-900/50 border-orange-200 dark:border-orange-800/30 focus:border-orange-500/70 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-500"
           />
+        </div>
+      </div>
 
-          <Button type="submit" className="w-full" disabled={isLoading}>
-            {isLoading ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Sending...
-              </>
-            ) : (
-              "Send Message"
-            )}
-          </Button>
-        </form>
-      </Form>
-    </div>
+      <div className="space-y-2">
+        <Label htmlFor="subject" className="text-gray-700 dark:text-gray-300">
+          Subject
+        </Label>
+        <Select>
+          <SelectTrigger className="bg-white/50 dark:bg-gray-900/50 border-orange-200 dark:border-orange-800/30 focus:border-orange-500/70 text-gray-900 dark:text-white">
+            <SelectValue placeholder="Select a subject" />
+          </SelectTrigger>
+          <SelectContent className="bg-white/90 dark:bg-gray-900/90 border-orange-200 dark:border-orange-800/30 text-gray-900 dark:text-white">
+            <SelectItem value="general">General Inquiry</SelectItem>
+            <SelectItem value="support">Technical Support</SelectItem>
+            <SelectItem value="sales">Sales Question</SelectItem>
+            <SelectItem value="partnership">Partnership Opportunity</SelectItem>
+            <SelectItem value="other">Other</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="message" className="text-gray-700 dark:text-gray-300">
+          Message
+        </Label>
+        <Textarea
+          id="message"
+          placeholder="How can we help you?"
+          required
+          rows={6}
+          className="bg-white/50 dark:bg-gray-900/50 border-orange-200 dark:border-orange-800/30 focus:border-orange-500/70 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-500 resize-none"
+        />
+      </div>
+
+      <div className="flex items-center space-x-2">
+        <input
+          type="checkbox"
+          id="newsletter"
+          className="rounded border-orange-200 dark:border-orange-800/30 bg-white/50 dark:bg-gray-900/50 text-orange-500 focus:ring-orange-500"
+        />
+        <Label htmlFor="newsletter" className="text-gray-700 dark:text-gray-300 text-sm">
+          Subscribe to our newsletter for updates and tips
+        </Label>
+      </div>
+
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-700 hover:to-yellow-700 dark:from-orange-500 dark:to-yellow-500 dark:hover:from-orange-600 dark:hover:to-yellow-600 text-white"
+      >
+        {isSubmitting ? (
+          <>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...
+          </>
+        ) : (
+          "Send Message"
+        )}
+      </Button>
+    </form>
   )
-}
-
-  
+      }
+        
