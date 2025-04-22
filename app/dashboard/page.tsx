@@ -6,7 +6,7 @@ import { BarChart3, Users, Play, Clock, Settings, Bell, Plus, ChevronRight, Zap,
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Progress } from "@/components/ui/progress"
-import ThemeToggle from "@/components/theme-toggle"
+import ThemeToggle from "@/components/ui/theme-toggle"
 import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 
