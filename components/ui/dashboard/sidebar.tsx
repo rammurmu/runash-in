@@ -16,7 +16,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { ModeToggle } from "@/components/mode-toggle"
+//... import { ThemeToggle } from "@/components/theme-toggle" ...//
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: Home },
@@ -78,7 +78,7 @@ export function DashboardSidebar() {
             </SidebarMenu>
 
             <div className="flex items-center justify-between pt-4 border-t border-border">
-              <ModeToggle />
+              {/* <themeToggle /> */}
               <Button variant="ghost" size="icon">
                 <LogOut className="h-5 w-5" />
                 <span className="sr-only">Log out</span>
