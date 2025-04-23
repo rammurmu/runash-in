@@ -9,6 +9,7 @@ import { Progress } from "@/components/ui/progress"
 import ThemeToggle from "@/components/ui/mode-toggle"
 import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
+import { Sidebar } from "@/components/ui/dashboard/sidebar"
 
 // Sample data for charts
 const viewerData = [
@@ -67,6 +68,7 @@ export default function DashboardPage() {
             </div>
           </div>
         </div>
+        <Sidebar />
       </header>
 
       {/* Main Content */}
@@ -182,8 +184,8 @@ export default function DashboardPage() {
                           <YAxis
                             stroke="#888888"
                             fontSize={12}
-                            tickLine={false}
-                            axisLine={false}
+                            tickLine={true}
+                            axisLine={true}
                             tickFormatter={(value) => `${value}`}
                           />
                           <ChartTooltip content={<ChartTooltipContent />} />
@@ -547,19 +549,19 @@ export default function DashboardPage() {
             </p>
             <div className="flex items-center gap-4 mt-4 md:mt-0">
               <a
-                href="/help"
+                href="help"
                 className="text-sm text-gray-500 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400"
               >
                 Help Center
               </a>
               <a
-                href="/terms"
+                href="terms"
                 className="text-sm text-gray-500 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400"
               >
                 Terms
               </a>
               <a
-                href="/privacy"
+                href="privacy"
                 className="text-sm text-gray-500 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400"
               >
                 Privacy
