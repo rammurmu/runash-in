@@ -6,7 +6,7 @@ import { BarChart3, Users, Play, Clock, Settings, Bell, Plus, ChevronRight, Zap,
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Progress } from "@/components/ui/progress"
-import ModeToggle from "@/components/ui/mode-toggle"
+//... import ModeToggle from "@/components/ui/mode-toggle" ...//
 //... import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts" ...//
 //... import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart" .../
 import { Sidebar } from "@/components/ui/sidebar"
@@ -55,7 +55,7 @@ export default function DashboardPage() {
               <Button variant="ghost" size="icon">
                 <Settings className="h-5 w-5 text-gray-700 dark:text-gray-300" />
               </Button>
-              <ModeToggle />
+              {/* <ModeToggle /> */}
               <div className="flex items-center gap-3">
                 <div className="h-8 w-8 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 dark:from-orange-400 dark:to-yellow-400 flex items-center justify-center text-white font-medium">
                   A
