@@ -7,9 +7,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Progress } from "@/components/ui/progress"
 import ThemeToggle from "@/components/ui/mode-toggle"
-import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
-import { Sidebar } from "@/components/ui/dashboard/sidebar"
+//... import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts" ...//
+//... import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart" .../
+import { Sidebar } from "@/components/ui/sidebar"
 
 // Sample data for charts
 const viewerData = [
@@ -154,7 +154,7 @@ export default function DashboardPage() {
           <TabsContent value="overview">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Charts */}
-              <Card className="lg:col-span-2 bg-white dark:bg-gray-900 border-orange-200/50 dark:border-orange-900/30">
+              {/* <Card className="lg:col-span-2 bg-white dark:bg-gray-900 border-orange-200/50 dark:border-orange-900/30">
                 <CardHeader>
                   <CardTitle>Viewer Analytics</CardTitle>
                   <CardDescription>Your stream performance over the past week</CardDescription>
@@ -184,8 +184,8 @@ export default function DashboardPage() {
                           <YAxis
                             stroke="#888888"
                             fontSize={12}
-                            tickLine={true}
-                            axisLine={true}
+                            tickLine={false}
+                            axisLine={false}
                             tickFormatter={(value) => `${value}`}
                           />
                           <ChartTooltip content={<ChartTooltipContent />} />
@@ -208,7 +208,7 @@ export default function DashboardPage() {
                     </ChartContainer>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
 
               {/* Upcoming Streams */}
               <Card className="bg-white dark:bg-gray-900 border-orange-200/50 dark:border-orange-900/30">
