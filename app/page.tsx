@@ -4,7 +4,7 @@ import VideoBackground from "@/components/ui/video-background"
 import FeatureCard from "@/components/ui/feature-card"
 import Navbar from "@/components/ui/navbar"
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
@@ -13,7 +13,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <VideoBackground />
         <div className="container relative z-10 mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-600 to--500 text-transparent bg-clip-text">
             RunAsh AI Live Streaming Platform
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
@@ -22,7 +22,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+              className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-yello-700"
             >
               Start Streaming <Play className="ml-2 h-4 w-4" />
             </Button>
@@ -37,7 +37,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-purple-950">
+      <section className="py-20 bg-gradient-to-b from-white to-orange-650">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Powerful AI Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -124,17 +124,17 @@ export default function Home() {
               <h3 className="font-bold text-lg mb-4">RunAsh</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="about" className="text-gray-400 hover:text-white">
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="careers" className="text-gray-400 hover:text-white">
                     Careers
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="press" className="text-gray-400 hover:text-white">
                     Press
                   </a>
                 </li>
@@ -144,17 +144,17 @@ export default function Home() {
               <h3 className="font-bold text-lg mb-4">Product</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="features" className="text-gray-400 hover:text-white">
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="pricing" className="text-gray-400 hover:text-white">
                     Pricing
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="integration" className="text-gray-400 hover:text-white">
                     Integrations
                   </a>
                 </li>
@@ -164,17 +164,17 @@ export default function Home() {
               <h3 className="font-bold text-lg mb-4">Resources</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="documentation" className="text-gray-400 hover:text-white">
                     Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="tutorials" className="text-gray-400 hover:text-white">
                     Tutorials
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="blog" className="text-gray-400 hover:text-white">
                     Blog
                   </a>
                 </li>
@@ -184,17 +184,17 @@ export default function Home() {
               <h3 className="font-bold text-lg mb-4">Connect</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="https://x.com/runash" className="text-gray-400 hover:text-white">
                     Twitter
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="https://discord.com/runash" className="text-gray-400 hover:text-white">
                     Discord
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="contact" className="text-gray-400 hover:text-white">
                     Contact
                   </a>
                 </li>
