@@ -3,12 +3,12 @@
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 
-interface FaqItemsProps {
+interface FaqItemProps {
   question: string
   answer: string
 }
 
-export default function FaqItems({ question, answer }: FaqItemsProps) {
+export default function FaqItem({ question, answer }: FaqItemProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
