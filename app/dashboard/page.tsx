@@ -9,7 +9,7 @@ import { Progress } from "@/components/ui/progress"
 //... import ModeToggle from "@/components/ui/mode-toggle" ...//
 //... import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts" ...//
 //... import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart" .../
-import { Sidebar } from "@/components/ui/sidebar"
+//... import { Sidebar } from "@/components/ui/sidebar" ...//
 
 // Sample data for charts
 const viewerData = [
@@ -68,7 +68,7 @@ export default function DashboardPage() {
             </div>
           </div>
         </div>
-        <Sidebar />
+        
       </header>
 
       {/* Main Content */}
