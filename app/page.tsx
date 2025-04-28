@@ -37,24 +37,56 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-orange-650">
+      <section className="py-24 bg-gradient-to-b from-white to-orange-50 dark:from-gray-900 dark:to-gray-950">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Powerful AI Features</h2>
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 backdrop-blur-sm border border-orange-200 dark:border-orange-800/50">
+              <span className="text-orange-600 dark:text-orange-400 font-medium text-sm">Powerful Features</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500 dark:from-orange-400 dark:via-orange-300 dark:to-yellow-300 text-transparent bg-clip-text">
+              AI-Powered Streaming Tools
+            </h2>
+            <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+              Unlock the full potential of your content with our cutting-edge AI features designed for modern creators
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard
-              icon={<Zap className="h-10 w-10 text-purple-400" />}
+              icon={<Zap className="h-6 w-6 text-white" />}
               title="AI-Enhanced Streaming"
-              description="Automatically enhance your video quality, reduce noise, and optimize bandwidth in real-time."
+              description="Automatically enhance your video quality, reduce noise, and optimize bandwidth in real-time with our proprietary AI algorithms."
+              gradient="from-orange-600 to-yellow-500"
             />
             <FeatureCard
-              icon={<Users className="h-10 w-10 text-purple-400" />}
+              icon={<Users className="h-6 w-6 text-white" />}
               title="Smart Audience Engagement"
-              description="AI-powered chat moderation and audience analytics to boost engagement."
+              description="AI-powered chat moderation, sentiment analysis, and audience analytics to boost engagement and grow your community."
+              gradient="from-orange-500 to-red-500"
             />
             <FeatureCard
-              icon={<Shield className="h-10 w-10 text-purple-400" />}
+              icon={<Shield className="h-6 w-6 text-white" />}
               title="Content Protection"
-              description="Advanced AI content monitoring to protect your brand and comply with platform guidelines."
+              description="Advanced AI content monitoring to protect your brand and comply with platform guidelines automatically."
+              gradient="from-yellow-500 to-orange-600"
+            />
+            <FeatureCard
+              icon={<BarChart className="h-6 w-6 text-white" />}
+              title="Analytics Dashboard"
+              description="Comprehensive analytics with AI-driven insights to understand your audience and optimize your content strategy."
+              gradient="from-red-500 to-orange-500"
+            />
+            <FeatureCard
+              icon={<Star className="h-6 w-6 text-white" />}
+              title="AI Content Suggestions"
+              description="Get personalized content recommendations based on your audience preferences and trending topics."
+              gradient="from-yellow-400 to-orange-500"
+            />
+            <FeatureCard
+              icon={<Globe className="h-6 w-6 text-white" />}
+              title="Multi-platform Streaming"
+              description="Stream simultaneously to multiple platforms with optimized settings for each destination."
+              gradient="from-orange-600 to-red-600"
             />
           </div>
         </div>
