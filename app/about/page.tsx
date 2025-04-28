@@ -3,10 +3,10 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Code, Cpu, Globe, Layers, Shield, Zap } from "lucide-react"
 import Link from "next/link"
-import TeamMember from "@/components/team-member"
-import TechStack from "@/components/tech-stack"
-import Milestone from "@/components/milestone"
-import ThemeToggle from "@/components/theme-toggle"
+import TeamMember from "@/components/ui/team-member"
+import TechStack from "@/components/ui/tech-stack"
+import Milestone from "@/components/ui/milestone"
+//... import ThemeToggle from "@/components/theme-toggle" ...//
 
 export default function AboutPage() {
   return (
@@ -32,7 +32,7 @@ export default function AboutPage() {
 
         <div className="container relative z-10 mx-auto px-4">
           <div className="flex justify-end mb-4">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-block mb-6 px-6 py-2 border border-orange-500/30 rounded-full bg-orange-500/10 backdrop-blur-sm">
