@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Play, Zap, Users, Shield, ArrowRight } from "lucide-react"
+import { Play, Zap, Users, Shield, ArrowRight, ChevronRight, Star, BarChart, Globe } from "lucide-react"
 import VideoBackground from "@/components/ui/video-background"
 import FeatureCard from "@/components/ui/feature-card"
 import Navbar from "@/components/ui/navbar"
