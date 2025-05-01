@@ -12,7 +12,7 @@ export default function TermsPage() {
       <div className="space-y-8">
         <div>
           <h1 className="text-4xl font-bold">Terms of Service</h1>
-          <p className="mt-2 text-muted-foreground">Last updated: April 30, 2023</p>
+          <p className="mt-2 text-muted-foreground">Last updated: April 06, 2025</p>
         </div>
 
         <div className="prose dark:prose-invert max-w-none">
